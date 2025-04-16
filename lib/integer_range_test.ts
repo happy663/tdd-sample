@@ -25,4 +25,8 @@ describe("整数閉区間を示すクラス", () => {
     test("整数閉区間より小さい数値を入力したらfalseを返す", () => {
         expect(integerRange.isInsideRange(3, 7, 1)).toBe(false);
     });
+
+    test("下端に小数を受け取ったら false を返す", () => {
+        expect(integerRange.isInsideRange(3.1, 7, 4)).toBe(false);
+    });
 });
