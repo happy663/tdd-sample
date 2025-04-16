@@ -13,4 +13,16 @@ describe("整数閉区間を示すクラス", () => {
     test("整数閉区間内の数値を入力したらtrueを返す", () => {
         expect(integerRange.isInsideRange(3, 7, 5)).toBe(true);
     });
+
+    test("整数閉区間の下端の数値を入力したらtrueを返す", () => {
+        expect(integerRange.isInsideRange(3, 7, 3)).toBe(true);
+    });
+
+    test("整数閉区間の上端の数値を入力したらtrueを返す", () => {
+        expect(integerRange.isInsideRange(3, 7, 7)).toBe(true);
+    });
+
+    test("整数閉区間より小さい数値を入力したらfalseを返す", () => {
+        expect(integerRange.isInsideRange(3, 7, 1)).toBe(false);
+    });
 });
