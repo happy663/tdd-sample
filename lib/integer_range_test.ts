@@ -27,7 +27,9 @@ describe("整数閉区間を示すクラス", () => {
     });
 
     test("下端に小数を受け取ったら false を返す", () => {
-        expect(integerRange.isInsideRange(3.1, 7, 4)).toBe(false);
+        expect(integerRange.isInsideRange(3.1, 7, 4)).toThrow(
+            "validationError:小数を入力できません"
+        );
     });
 
     test("上端に小数を受け取ったら false を返す", () => {
