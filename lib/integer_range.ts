@@ -3,7 +3,7 @@ export class IntegerRange {
         return `[${bottom}, ${top}]`;
     }
 
-    isInsideRange(bottom: number, top: number) {
-        return bottom <= top && bottom >= top;
+    isInsideRange(bottom: number, top: number, target: number): boolean {
+        return bottom <= target && target <= top;
     }
 }
